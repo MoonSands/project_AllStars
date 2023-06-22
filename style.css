@@ -102,13 +102,12 @@
 .title{
     font-size: calc(24px + 32 * (100vw / 1349));
     line-height: calc(28px + 36 * (100vw / 1349));
-    font-weight: bold;
-    margin: 4vh 0;
+    margin-bottom: 4vh;
 }
 
 .subtitle{
-    font-size: calc(16px + 2 * (100vw / 1349));
-    line-height: calc(24px + 6 * (100vw / 1349));
+    font-size: calc(20px + 4 * (100vw / 1349));
+    line-height: calc(28px + 8 * (100vw / 1349));
 }
 
 .text-white{
@@ -128,7 +127,7 @@
 .button{
     width: 13vw;
     margin: 5vh 0;
-    padding: 1vh;
+    padding: 1.5vh 1vw;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -169,12 +168,41 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    transition: background-image 2s ease-in-out;
+    transition: background-image 7000ms ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.studio_bg{
+.hidden{
     display: none;
 }
 
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10vh 5vw;
+}
+
+.footer-item{
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.videobox{
+    margin: 0 5vw 0 -5vw;
+    width: 40vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.videosection{
+    display: flex;
+    flex-direction: row;
+}
 
 
