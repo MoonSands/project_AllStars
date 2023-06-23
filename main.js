@@ -9,3 +9,16 @@ function studio_bg(){
     }
     setInterval(timerfunc, 10000, studio_elem, bgs); 
 }
+
+function servs_bg(){
+    let servs = document.getElementsByClassName('servs__img');
+    let servs_img= document.getElementsByClassName('servs__img_bg');
+
+    if (servs.length==servs_img.length){
+        console.log(servs.length);
+        for (let i=0; i<servs.length; i++){
+            console.log(servs_img[i].getAttribute('src'));
+            servs[i].style.backgroundImage=`url(${servs_img[i].getAttribute('src')})`;
+        }
+    }
+}

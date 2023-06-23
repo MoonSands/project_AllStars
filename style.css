@@ -140,8 +140,9 @@
 
 
 .button{
+    display: block;
     width: 13vw;
-    margin: 5vh 0;
+    margin-top: 5vh;
     padding: 1.5vh 1vw;
     box-sizing: border-box;
     border: none;
@@ -160,30 +161,31 @@
     padding: 5vh 0 0;
 }
 
-.team{
+.card-list{
     margin-top: 5vh;
     margin-bottom: 10vh;
     display: inline-flex;
     flex-direction: column;
     justify-content: stretch;
 }
-.team-section{
+.card-section{
     background-color: #fcf8d2;
     border-radius: 20px;
     display: flex;
-    padding: 2vw;
     margin: 3vh 0;
     box-sizing: border-box;
 }
-.team-textbox{
+
+.p-2{
+    padding: 2vw;
+}
+
+.section-textbox{
     flex-grow: 1;
+    margin-left: 2vw;
 }
-.team-textbox__head{
+.section-textbox__head{
     margin-bottom: 2vh;
-}
-.team-section__link{
-    display: block;
-    margin-top: 3vh;
 }
 
 
@@ -203,7 +205,6 @@
 .team-section__img{
     width: 15%;
     margin-bottom: 0;
-    margin-right: 2vw;
     align-self: center;
 }
 .team__link{
@@ -211,7 +212,13 @@
     text-align: right;
     margin-top: 2%;
 }
-
+.servs__img{
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    background-image:unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .main-studio{
     background-image: unset;
     background-repeat: no-repeat;
