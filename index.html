@@ -17,7 +17,7 @@
                 <a href="studios.html" class="nav_item text text-white">Студии</a>
                 <a href="team.html" class="nav_item text text-white">Команда</a>
                 <a href="about.html" class="nav_item text text-white">О нас</a>
-                <a href="#" class="nav_item text text-white">Контакты</a>
+                <a class="nav_item text text-white popup_btn" name="contacts">Контакты</a>
             </nav>
         </header>
         <div class="textbox">
@@ -114,11 +114,23 @@
             <a href="#" class="text subtitle text-white">Студии</a>
             <a href="#" class="text subtitle text-white">Команда</a>
             <a href="#" class="text subtitle text-white">О нас</a>
-            <a href="#" class="text subtitle text-white">Контакты</a>
         </div>
     </footer>
         
+    <div class="full-scn popup-wrapper hidden" name="contacts">
+        <div class="popup p-2">
+            <h1 class="text subtitle">Contacts</h1>
+            <ul>
+                <li><a href="#" class="text">mail</a></li>
+                <li><a href="#" class="text">telegram</a></li>
+                <li><a href="#" class="text">whatsapp</a></li>
+            </ul>
+            <a class="button close-button" name="contacts">
+                <span class="text text-bold">close</span>
+            </a>
+        </div>
+    </div>
     <script src="main.js"></script>
-    <script>studio_bg()</script>
+    
 </body>
 </html>

@@ -10,6 +10,8 @@ function studio_bg(){
     setInterval(timerfunc, 10000, studio_elem, bgs); 
 }
 
+studio_bg();
+
 function servs_bg(){
     let servs = document.getElementsByClassName('servs__img');
     let servs_img= document.getElementsByClassName('servs__img_bg');
@@ -22,3 +24,67 @@ function servs_bg(){
         }
     }
 }
+
+
+/* let slideIndex = 1;
+showSlides(slideIndex);
+
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+
+function previousSlide() {
+    showSlides(slideIndex -= 1);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+
+    let slides = document.getElementsByClassName("item");
+
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+} */
+
+function popups(){
+    let popup_btns = document.getElementsByClassName('popup_btn');
+    let popup_banners= document.getElementsByClassName('popup-wrapper'); 
+    console.log(popup_btns.length);
+    console.log(popup_banners.length);
+    for (let j=0 ;j<popup_btns.length;j++){
+        for (let i=0; i<popup_banners.length;i++){
+            if (popup_btns[j].getAttribute('name')==popup_banners[i].getAttribute('name')){
+                popup_btns[j].onclick = function(){
+                    popup_banners[i].classList.remove('hidden');
+                    document.body.style.overflow='hidden';
+                }
+                popup_banners[i].onclick = function(){
+                    popup_banners[i].classList.add('hidden');
+                    document.body.style.overflow='';
+                }
+                popup_banners[i].querySelector('close-button').onclick = function(){
+                    popup_banners[i].classList.add('hidden');
+                    document.body.style.overflow='';
+                }
+                break;
+            }
+            else{
+                continue;
+            } 
+        }
+    } 
+}
+
+popups();
