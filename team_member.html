@@ -5,19 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Услуги</title>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <title>О команде</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">LOGO</a>
-        <nav class="nav">
-            <a href="#" class="nav_item text text-white">Услуги</a>
-            <a href="#" class="nav_item text text-white">Студии</a>
-            <a href="#" class="nav_item text text-white">Команда</a>
-            <a href="#" class="nav_item text text-white">О нас</a>
-            <a href="#" class="nav_item text text-white">Контакты</a>
-        </nav>
-    </header>
+  <header class="header px-5">
+    <a href="about.html" class="logo"><img class="logo__img" src="img/Ресурс 22.png" alt=""></a>
+    <nav class="nav nav-dark">
+        <a href="servs.html" class="nav_item text text-white">Услуги</a>
+        <a href="studios.html" class="nav_item text text-white">Студии</a>
+        <a href="team.html" class="nav_item text text-white">Команда</a>
+        <a href="about.html" class="nav_item text text-white">О нас</a>
+        <a class="nav_item text text-white popup_btn" name="contacts">Контакты</a>
+    </nav>
+</header>
+    <section class="px-5">
+        <h1 class="text title">Portfolio</h1>
+        <div class="gallery">
+        <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+        </a>
+          
+          <a href="img/band-performing-studio.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/band-performing-studio.jpg"  class="gallery-img"/>
+          </a>
+          <a href="img/group-of-active-kids-cheerful-girls-dancing-isolated-over-green-background-in-neon-light.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/group-of-active-kids-cheerful-girls-dancing-isolated-over-green-background-in-neon-light.jpg"  class="gallery-img"/>
+          </a>
+          <a href="img/happy-middle-aged-woman-relaxing-outdoors.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/happy-middle-aged-woman-relaxing-outdoors.jpg"  class="gallery-img"/>
+          </a>
+          <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+          </a>
+          <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+          </a>
+          <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+          </a>
+          <script>
+            Fancybox.bind('[data-fancybox="gallery"]', {});
+          </script>
+        </div>
+        
+    </section>
     <footer class="full-scn footer">
         <div class="footer-item">
             <h1 class="text title text-white ">Any questions? Ask us!</h1>
@@ -35,7 +71,19 @@
         </div>
     </footer>
 
-
+    <div class="full-scn popup-wrapper hidden" name="contacts">
+      <div class="popup p-2">
+          <h1 class="text subtitle">Contacts</h1>
+          <ul>
+              <li><a href="#" class="text">mail</a></li>
+              <li><a href="#" class="text">telegram</a></li>
+              <li><a href="#" class="text">whatsapp</a></li>
+          </ul>
+          <a class="button close-button" name="contacts">
+              <span class="text text-bold">close</span>
+          </a>
+      </div>
+  </div>
     <script src="main.js"></script>
 </body>
 </html>

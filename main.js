@@ -10,8 +10,6 @@ function studio_bg(){
     setInterval(timerfunc, 10000, studio_elem, bgs); 
 }
 
-studio_bg();
-
 function servs_bg(){
     let servs = document.getElementsByClassName('servs__img');
     let servs_img= document.getElementsByClassName('servs__img_bg');

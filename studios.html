@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/Ресурс 23.png">
     <title>Услуги</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
             <a href="studios.html" class="nav_item text">Студии</a>
             <a href="team.html" class="nav_item text">Команда</a>
             <a href="about.html" class="nav_item text">О нас</a>
-            <a href="#" class="nav_item text">Контакты</a>
+            <a class="nav_item text popup_btn" name="contacts">Контакты</a>
         </nav>
     </header>
     <section class="px-5">
@@ -40,7 +41,7 @@
                         <li class="text">Item</li>
                         <li class="text">Item</li>
                     </ul>
-                    <a href="#" class="section__link text text-i text-bold button">More &gt;</a>
+                    <a href="studio_single.html" class="section__link text text-i text-bold button">More &gt;</a>
                 </div>
             </div>
             <div class="card-section">
@@ -61,7 +62,7 @@
                         <li class="text">Item</li>
                         <li class="text">Item</li>
                     </ul>
-                    <a href="#" class="section__link text text-i text-bold button">More &gt;</a>
+                    <a href="studio_single.html" class="section__link text text-i text-bold button">More &gt;</a>
                 </div>
             </div>
             <div class="card-section">
@@ -82,7 +83,7 @@
                         <li class="text">Item</li>
                         <li class="text">Item</li>
                     </ul>
-                    <a href="#" class="section__link text text-i text-bold button">More &gt;</a>
+                    <a href="studio_single.html" class="section__link text text-i text-bold button">More &gt;</a>
                 </div>
             </div>
             <div class="card-section">
@@ -103,7 +104,7 @@
                         <li class="text">Item</li>
                         <li class="text">Item</li>
                     </ul>
-                    <a href="#" class="section__link text text-i text-bold button">More &gt;</a>
+                    <a href="studio_single.html" class="section__link text text-i text-bold button">More &gt;</a>
                 </div>
             </div>
         </div>
@@ -117,15 +118,26 @@
         </div>
         <div class="footer-item">
             <h1 class="text title text-white ">Navigation</h1>
-            <a href="#" class="text subtitle text-white">Услуги</a>
-            <a href="#" class="text subtitle text-white">Студии</a>
-            <a href="#" class="text subtitle text-white">Команда</a>
-            <a href="#" class="text subtitle text-white">О нас</a>
-            <a href="#" class="text subtitle text-white">Контакты</a>
+            <a href="servs.html" class="text subtitle text-white">Услуги</a>
+            <a href="studios.html" class="text subtitle text-white">Студии</a>
+            <a href="team.html" class="text subtitle text-white">Команда</a>
+            <a href="about.html" class="text subtitle text-white">О нас</a>
         </div>
     </footer>
 
-
+    <div class="full-scn popup-wrapper hidden" name="contacts">
+        <div class="popup p-2">
+            <h1 class="text subtitle">Contacts</h1>
+            <ul>
+                <li><a href="#" class="text">mail</a></li>
+                <li><a href="#" class="text">telegram</a></li>
+                <li><a href="#" class="text">whatsapp</a></li>
+            </ul>
+            <a class="button close-button" name="contacts">
+                <span class="text text-bold">close</span>
+            </a>
+        </div>
+    </div>
     <script src="main.js"></script>
     <script>servs_bg()</script>
 </body>
