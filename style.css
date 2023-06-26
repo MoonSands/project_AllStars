@@ -26,6 +26,10 @@
     font-style: normal;
 }
 
+body{
+    background-color: white;
+}
+
 .full-scn{
     box-sizing: border-box;
     width: 100%;
@@ -82,7 +86,7 @@
 }
 
 .logo{
-    display: block;
+    display: inline;
 }
 .logo__img{
     width: 60%;
@@ -138,6 +142,9 @@
     font-style: italic;
 }
 
+.text-shadow{
+    text-shadow: 3px 3px 0 #ba9cca;
+}
 
 .button{
     display: block;
@@ -146,9 +153,21 @@
     padding: 1.5vh 1vw;
     box-sizing: border-box;
     border: none;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 5px;    
     text-align: center;
+}
+
+.button-white{
+    background-color: #ffffff;
+}
+.button-light{
+    background-color: #ba9cca;
+}
+.button-dark{
+    background-color: rgb(97, 55, 141);
+}
+.button-border{
+    border: 2px solid rgb(97, 55, 141);
 }
 
 .team-main{
@@ -289,8 +308,10 @@
 .footer{
     background-color: black;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    box-sizing: border-box;
     padding: 10vh 5vw;
 }
 
@@ -298,6 +319,8 @@
     width: 35vw;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 4vh;
 }
 
 .videobox{
@@ -348,4 +371,46 @@
     max-width: 28vw;
     height: auto;
     
+}
+
+.list{
+    margin-top: 3vh;
+}
+.list-item::before{
+    content: url('img/list-icon_1.png');
+    margin-right: 5px;
+}
+.list-item{
+    margin-bottom: 1vh;
+}
+
+.py-2{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+.text-m{
+    margin:2vh 0 1vh;
+}
+
+.button-section{
+    justify-content: center;
+}
+.mx-1{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.popup-centered{
+    left:25vw;
+    right:25vw;
+    top: 30vh;
+    bottom: 30vh;
+}
+
+.booking{
+    background-color: #fcf8d2;
+    border-radius: 20px;
+}
+.line{
+   border:1px solid rgba(97, 55, 141, 0.5); 
 }

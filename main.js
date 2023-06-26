@@ -10,20 +10,36 @@ function studio_bg(){
     setInterval(timerfunc, 10000, studio_elem, bgs); 
 }
 
+function serv_bg(){
+    let serv = document.querySelector('.main-section');
+    let serv_bg = document.querySelector('.serv_bg');
+    serv.style.backgroundImage=`linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%),url(${serv_bg.getAttribute('src')})`;
+}
+
 function servs_bg(){
     let servs = document.getElementsByClassName('servs__img');
     let servs_img= document.getElementsByClassName('servs__img_bg');
 
     if (servs.length==servs_img.length){
-        console.log(servs.length);
         for (let i=0; i<servs.length; i++){
-            console.log(servs_img[i].getAttribute('src'));
             servs[i].style.backgroundImage=`url(${servs_img[i].getAttribute('src')})`;
         }
     }
 }
 
+function card_hover(name){
+    let cards = document.getElementsByName(name);
 
+    console.log(cards.length)
+    for (let i=0; i<cards.length; i++){
+        cards[i].addEventListener('mouseover', ()=>{
+            cards[i].querySelector('.section-textbox').querySelector('.section__link').classList.remove('hidden');
+        });
+        cards[i].addEventListener('mouseout', ()=>{
+                cards[i].querySelector('.section-textbox').querySelector('.section__link').classList.add('hidden');
+        });
+    }
+}
 /* let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -57,32 +73,38 @@ function showSlides(n) {
 } */
 
 function popups(){
-    let popup_btns = document.getElementsByClassName('popup_btn');
-    let popup_banners= document.getElementsByClassName('popup-wrapper'); 
-    console.log(popup_btns.length);
-    console.log(popup_banners.length);
-    for (let j=0 ;j<popup_btns.length;j++){
-        for (let i=0; i<popup_banners.length;i++){
-            if (popup_btns[j].getAttribute('name')==popup_banners[i].getAttribute('name')){
-                popup_btns[j].onclick = function(){
-                    popup_banners[i].classList.remove('hidden');
-                    document.body.style.overflow='hidden';
-                }
-                popup_banners[i].onclick = function(){
-                    popup_banners[i].classList.add('hidden');
-                    document.body.style.overflow='';
-                }
-                popup_banners[i].querySelector('close-button').onclick = function(){
-                    popup_banners[i].classList.add('hidden');
-                    document.body.style.overflow='';
-                }
-                break;
-            }
-            else{
-                continue;
-            } 
+    let contact_popup = document.getElementsByName('contacts')[0];
+    let popup_banners = document.getElementsByClassName('popup-wrapper');
+
+    for (let i=0;i<popup_banners.length;i++){
+        if(contact_popup.getAttribute('name')==popup_banners[i].getAttribute('name')){
+            popup_banners[i].onclick = ()=>{
+                popup_banners[i].classList.add('hidden');
+            document.body.style.overflow='';
         }
-    } 
+        popup_banners[i].querySelector('.close-button').onclick = ()=>{
+            popup_banners[i].classList.add('hidden');
+            document.body.style.overflow='';
+        }
+        contact_popup.onclick = ()=>{
+            console.log(1);
+            popup_banners[i].classList.remove('hidden');
+            document.body.style.overflow='hidden';
+        }  
+        }
+    }
+        
+    let booking_btn=document.getElementsByName('booking')[0];
+    let booking_banner=document.getElementsByClassName('booking')[0];
+
+    booking_btn.onclick = ()=>{
+        if(booking_banner.classList.contains('hidden')){
+            booking_banner.classList.remove('hidden');
+        }
+        else{
+           booking_banner.classList.add('hidden'); 
+        }
+    }
 }
 
 popups();
