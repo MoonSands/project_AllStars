@@ -277,6 +277,9 @@ body{
     margin-bottom: 0;
     align-self: center;
 }
+.team-member__img{
+    width: 40%;
+}
 .team__link{
     width: 100%;
     text-align: right;
@@ -399,6 +402,10 @@ body{
 .mx-1{
     margin-left: 1vw;
     margin-right: 1vw;
+}
+.my-2{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 .popup-centered{
     left:25vw;
