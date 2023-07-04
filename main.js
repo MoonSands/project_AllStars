@@ -28,10 +28,9 @@ function servs_bg(){
 }
 
 function card_hover(name){
-    let cards = document.getElementsByName(name);
-
-    console.log(cards.length)
+    let cards = document.getElementsByClassName(name);
     for (let i=0; i<cards.length; i++){
+    if (document.body.clientWidth>'1100'){
         cards[i].addEventListener('mouseover', ()=>{
             cards[i].querySelector('.section-textbox').querySelector('.section__link').classList.remove('hidden');
         });
@@ -39,45 +38,17 @@ function card_hover(name){
                 cards[i].querySelector('.section-textbox').querySelector('.section__link').classList.add('hidden');
         });
     }
+    else{
+        cards[i].querySelector('.section-textbox').querySelector('.section__link').classList.remove('hidden');
+    }}
+    
 }
-/* let slideIndex = 1;
-showSlides(slideIndex);
-
-function nextSlide() {
-    showSlides(slideIndex += 1);
-}
-
-function previousSlide() {
-    showSlides(slideIndex -= 1);
-}
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-
-    let slides = document.getElementsByClassName("item");
-
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-} */
 
 function popups(){
-    let contact_popup = document.getElementsByName('contacts')[0];
+    let contact_popup = document.getElementsByClassName('contacts')[0];
     let popup_banners = document.getElementsByClassName('popup-wrapper');
 
     for (let i=0;i<popup_banners.length;i++){
-        if(contact_popup.getAttribute('name')==popup_banners[i].getAttribute('name')){
             popup_banners[i].onclick = ()=>{
                 popup_banners[i].classList.add('hidden');
             document.body.style.overflow='';
@@ -91,20 +62,40 @@ function popups(){
             popup_banners[i].classList.remove('hidden');
             document.body.style.overflow='hidden';
         }  
-        }
     }
         
-    let booking_btn=document.getElementsByName('booking')[0];
+    let booking_btn=document.getElementsByClassName('booking-btn')[0];
     let booking_banner=document.getElementsByClassName('booking')[0];
 
-    booking_btn.onclick = ()=>{
+    if(booking_btn){
+       booking_btn.onclick = ()=>{
         if(booking_banner.classList.contains('hidden')){
             booking_banner.classList.remove('hidden');
         }
         else{
            booking_banner.classList.add('hidden'); 
         }
+    } 
     }
+    
+
+    let menu_btn=document.getElementsByClassName('menu-btn')[0];
+    let menu_banner=document.getElementsByClassName('menu-wrapper')[0];
+
+    menu_btn.onclick = ()=>
+        {
+            menu_banner.classList.remove('hidden');
+            document.body.style.overflow='hidden';
+        }
+        menu_banner.querySelector('.close-button').onclick = ()=>{
+               menu_banner.classList.add('hidden'); 
+               document.body.style.overflow='';
+            }
+             
+        
+
 }
+
+
 
 popups();

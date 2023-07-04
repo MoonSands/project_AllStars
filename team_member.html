@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <link
      rel="stylesheet"
@@ -14,19 +15,19 @@
 </head>
 <body>
   <header class="header px-5">
-    <a href="about.html" class="logo"><img class="logo__img" src="img/Ресурс 22.png" alt=""></a>
+    <a href="about.html" class="logo"><img class="logo__img" src="img/dark_logo.png" alt="dark_logo"></a>
+    <a class="nav nav-dark text menu-btn">Меню</a>
     <nav class="nav nav-dark">
         <a href="servs.html" class="nav_item text">Услуги</a>
         <a href="studios.html" class="nav_item text">Студии</a>
         <a href="team.html" class="nav_item text">Команда</a>
         <a href="about.html" class="nav_item text">О нас</a>
-        <a class="nav_item text popup_btn" name="contacts">Контакты</a>
+        <a class="nav_item text popup_btn contacts">Контакты</a>
     </nav>
 </header>
-    <section class="px-5">
-        <div>
-          <div class="section p-2" name="team">
-            <img src="img/team_member1.jpg" alt="" class="team__card__img team-member__img">
+    <div class="px-5">
+          <div class="section p-2" id="team">
+            <img src="img/team_member1.jpg" alt="team_member" class="team__card__img team-member__img">
             <div class="section-textbox">
                 <div class="section-textbox__head">
                     <h3 class="text title text-bold text-shadow">Alexander Kruechinin</h3>
@@ -46,63 +47,98 @@
         <hr class="line my-2">
         <div class="gallery">
         <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg" class="gallery-img" alt="gallery-pic"/>
         </a>
           
           <a href="img/band-performing-studio.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/band-performing-studio.jpg"  class="gallery-img"/>
+            <img src="img/band-performing-studio.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <a href="img/group-of-active-kids-cheerful-girls-dancing-isolated-over-green-background-in-neon-light.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/group-of-active-kids-cheerful-girls-dancing-isolated-over-green-background-in-neon-light.jpg"  class="gallery-img"/>
+            <img src="img/group-of-active-kids-cheerful-girls-dancing-isolated-over-green-background-in-neon-light.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <a href="img/happy-middle-aged-woman-relaxing-outdoors.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/happy-middle-aged-woman-relaxing-outdoors.jpg"  class="gallery-img"/>
+            <img src="img/happy-middle-aged-woman-relaxing-outdoors.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <a href="img/beautiful-couple-having-their-wedding-beach.jpg" data-fancybox="gallery" class="gallery-link">
-            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img"/>
+            <img src="img/beautiful-couple-having-their-wedding-beach.jpg"  class="gallery-img" alt="gallery-pic"/>
           </a>
           <script>
             Fancybox.bind('[data-fancybox="gallery"]', {});
           </script>
         </div>
         
-    </section>
-    <footer class="full-scn footer">
-        <div class="footer-item">
-            <h1 class="text title text-white ">Any questions? Ask us!</h1>
-            <a href="#" class="text subtitle text-white">mail</a>
-            <a href="#" class="text subtitle text-white">telegram</a>
-            <a href="#" class="text subtitle text-white">whatsapp</a>
-        </div>
-        <div class="footer-item">
-            <h1 class="text title text-white ">Navigation</h1>
-            <a href="#" class="text subtitle text-white">Услуги</a>
-            <a href="#" class="text subtitle text-white">Студии</a>
-            <a href="#" class="text subtitle text-white">Команда</a>
-            <a href="#" class="text subtitle text-white">О нас</a>
-            <a href="#" class="text subtitle text-white">Контакты</a>
-        </div>
-    </footer>
-
-    <div class="full-scn popup-wrapper hidden" name="contacts">
-      <div class="popup p-2">
-          <h1 class="text subtitle">Contacts</h1>
-          <ul>
-              <li><a href="#" class="text">mail</a></li>
-              <li><a href="#" class="text">telegram</a></li>
-              <li><a href="#" class="text">whatsapp</a></li>
-          </ul>
-          <a class="button close-button" name="contacts">
-              <span class="text text-bold">close</span>
-          </a>
+    </div>
+    <footer class="full-scn px-5 footer">
+      <div class="footer-item">
+          <a href="index.html" class="logo"><img class="logo__img" src="img/light_logo.png" alt="light_logo"></a>
+          <h3 class="text title text-bold text-white">Воплотим все <br> ваши мечты</h3>
       </div>
+      <div class="footer-item">
+<div class="footer-item">
+          <h1 class="text title text-white ">Есть вопросы? <br> Мы ответим</h1>
+          <a href="mailto:oaooaommmmmm@gmail.com" class="text subtitle text-white">mail</a>
+          <a href="https://wa.me/79612992003" class="text subtitle text-white">whatsapp</a>
+          <a href=" https://t.me/rksi_ru" class="text subtitle text-white">telegram</a>
+      </div>
+      <div class="footer-item">
+          <h1 class="text title text-white ">Навигация</h1>
+          <a href="servs.html" class="text subtitle text-white">Услуги</a>
+          <a href="studios.html" class="text subtitle text-white">Студии</a>
+          <a href="team.html" class="text subtitle text-white">Команда</a>
+          <a href="about.html" class="text subtitle text-white">О нас</a>
+      </div>
+      </div>
+      
+      
+  </footer>
+      
+  <div class="full-scn popup-wrapper hidden">
+    <div class="popup p-2">
+        <h1 class="text subtitle">Контакты</h1>
+        <hr class="line">
+        <ul>
+            <li><a href="mailto:oaooaommmmmm@gmail.com" class="text subtitle">mail</a></li>
+            <li><a href="https://wa.me/79612992003" class="text subtitle">whatsapp</a></li>
+            <li><a href=" https://t.me/rksi_ru" class="text subtitle">telegram</a></li>
+        </ul>
+        <div class="button-section">
+        <a class="button close-button button-light">
+            <span class="text text-bold">Закрыть</span>
+        </a>
+        </div>
+        
+    </div>
+</div>
+<div class="full-scn menu-wrapper hidden absolute px-5 py-2">
+  <div class="footer-item">
+  <div class="footer-item">
+      <h1 class="text title text-white ">Навигация</h1>
+      <a href="servs.html" class="text subtitle text-white">Услуги</a>
+      <a href="studios.html" class="text subtitle text-white">Студии</a>
+      <a href="team.html" class="text subtitle text-white">Команда</a>
+      <a href="about.html" class="text subtitle text-white">О нас</a>
   </div>
+  <div class="footer-item">
+      <h1 class="text subtitle text-white">Контакты</h1>
+      <ul>
+          <li><a href="mailto:oaooaommmmmm@gmail.com" class="text subtitle text-white">mail</a></li>
+          <li><a href="https://wa.me/79612992003" class="text subtitle text-white">whatsapp</a></li>
+          <li><a href=" https://t.me/rksi_ru" class="text subtitle text-white">telegram</a></li>
+      </ul>
+  </div>
+  <div class="button-section">
+    <a class="button close-button button-light">
+        <span class="text text-bold">Закрыть</span>
+    </a>
+    </div>
+  </div>
+</div>
     <script src="main.js"></script>
 </body>
 </html>
